@@ -1,5 +1,6 @@
 Flask==2.2.3
 Werkzeug==2.2.3
+fitz
 PyMuPDF==1.18.19 
 pandas==1.5.3
 numpy
