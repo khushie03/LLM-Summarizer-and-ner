@@ -10,4 +10,4 @@ services:
       - key: SECRET_KEY
         value: supersecretkey
       - key: PYTHON_VERSION
-        value: 3.11  # Set the desired Python version here
+        value: 3.11.9  # Set the desired Python version here
