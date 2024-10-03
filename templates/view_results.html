@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results for {{ filename }}</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Results for {{ filename }}</h1>
+
+    <h2>Summary:</h2>
+    <p>{{ summary }}</p>
+
+    <h2>NER Tags:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Tokens</th>
+                <th>Tags</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for tag in ner_tags %}
+                <tr>
+                    <td>{{ tag['Tokens'] }}</td>
+                    <td>{{ tag['Tags'] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ url_for('index') }}">Upload another file</a>
+</body>
+</html>
