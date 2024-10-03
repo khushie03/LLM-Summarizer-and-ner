@@ -47,8 +47,3 @@ def summarize_dialogue(custom_dialogue):
         print(f"An error occurred with the custom model: {e}")
         return None
 
-df = tag_text(text_de, tags, model, xlmr_tokenizer)
-print(df)
-
-print(summarize_dialogue("""
-                         I loved playing football India born in Cricket """))
