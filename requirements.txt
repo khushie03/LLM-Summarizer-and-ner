@@ -1,0 +1,9 @@
+Flask==2.2.3
+Werkzeug==2.2.3
+PyMuPDF==1.19.6
+pandas==1.5.3
+numpy
+transformers
+fitz
+PyMuPDF
+python==3.11.*
