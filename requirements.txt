@@ -4,6 +4,4 @@ PyMuPDF==1.19.6
 pandas==1.5.3
 numpy
 transformers
-fitz
-PyMuPDF
 torch
