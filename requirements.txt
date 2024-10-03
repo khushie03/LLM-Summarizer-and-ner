@@ -6,4 +6,4 @@ numpy
 transformers
 fitz
 PyMuPDF
-python==3.11.*
+torch
