@@ -3,7 +3,7 @@ from werkzeug.utils import secure_filename
 import os
 import json
 from main import *
-import fitz  
+from pypdfloader import PdfLoader
 from main import tag_text, summarize_dialogue  
 
 app = Flask(__name__)
@@ -15,10 +15,8 @@ if not os.path.exists(app.config['UPLOAD_FOLDER']):
 tags = ['O', 'B-PER', 'I-PER', 'B-ORG', 'I-ORG', 'B-LOC', 'I-LOC']
 
 def extract_text_from_pdf(pdf_path):
-    text = ""
-    with fitz.open(pdf_path) as pdf:
-        for page in pdf:
-            text += page.get_text()
+    loader = PdfLoader(pdf_path)
+    text = loader.load_text()
     return text
 
 @app.route('/')
