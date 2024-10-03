@@ -1,10 +1,9 @@
 Flask
+Gunicorn
 Werkzeug
-fitz
 PyMuPDF
 pandas
 numpy
 transformers
 torch
 frontend
-tools
