@@ -3,9 +3,11 @@ services:
     name: my-flask-app
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app  # Replace with your actual start command
+    startCommand: gunicorn app:app  # Replace with your start command
     envVars:
       - key: FLASK_ENV
         value: production
       - key: SECRET_KEY
-        value: supersecretkey  # Update with your actual key
+        value: supersecretkey
+      - key: PYTHON_VERSION
+        value: 3.11  # Set the desired Python version here
