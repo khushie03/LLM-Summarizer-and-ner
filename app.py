@@ -44,6 +44,7 @@ def upload_file():
         pdf_text = extract_text_from_pdf(filepath)
         ner_tags_df = tag_text(pdf_text, tags, model, xlmr_tokenizer)  
         summarized_text = summarize_dialogue(pdf_text) 
+        print(summarized_text)
         ner_json = ner_tags_df.to_dict(orient='records')
         flash('File successfully uploaded and processed!', 'success')
         print(ner_json)
