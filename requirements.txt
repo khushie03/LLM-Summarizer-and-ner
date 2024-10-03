@@ -1,9 +1,9 @@
 Flask
 Gunicorn
-Werkzeug
-PyMuPDF
+fitz
 pandas
-numpy
 transformers
 torch
 frontend
+tools
+sentencepiece
