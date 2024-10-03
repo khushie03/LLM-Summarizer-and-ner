@@ -1,0 +1,11 @@
+version: 1
+services:
+  - type: web
+    name: app
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      FLASK_ENV: production
+    autoDeploy: true
