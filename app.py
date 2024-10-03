@@ -44,10 +44,10 @@ def upload_file():
         pdf_text = extract_text_from_pdf(filepath)
         ner_tags_df = tag_text(pdf_text, tags, model, xlmr_tokenizer)  
         summarized_text = summarize_dialogue(pdf_text) 
-        print(summarized_text)
+        #print(summarized_text)
         ner_json = ner_tags_df.to_dict(orient='records')
         flash('File successfully uploaded and processed!', 'success')
-        print(ner_json)
+        #print(ner_json)
         return redirect(url_for('view_results', filename=filename, ner_tags=json.dumps(ner_json), summary=summarized_text))
     else:
         flash('Invalid file type. Please upload a PDF.', 'error')
