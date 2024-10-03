@@ -62,6 +62,3 @@ def view_results(filename):
     return render_template('view_results.html', filename=filename, ner_tags=ner_tags, summary=summary)
 
 
-if __name__ == '__main__':
-    app.run()
-
