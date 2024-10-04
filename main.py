@@ -47,3 +47,5 @@ def summarize_dialogue(custom_dialogue):
         print(f"An error occurred with the custom model: {e}")
         return None
 
+if __name__ == '__main__':
+    app.run(debug=True)
