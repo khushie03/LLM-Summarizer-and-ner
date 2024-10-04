@@ -7,7 +7,7 @@ text_de = "Google Office is in London Google established in 10092 , Google worki
 tags = ['O', 'B-PER', 'I-PER', 'B-ORG', 'I-ORG', 'B-LOC', 'I-LOC']
 
 # Define device
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+device = "cpu"
 
 model = AutoModelForTokenClassification.from_pretrained("Khushiee/xlm-roberta-base-finetuned-panx-ner-1").to(device)
 xlmr_tokenizer = AutoTokenizer.from_pretrained("xlm-roberta-base")
